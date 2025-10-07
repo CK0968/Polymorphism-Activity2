@@ -1,0 +1,9 @@
+package polymorphism;
+
+import javax.swing.JOptionPane;
+
+public class Vehicle {
+    public void move() {
+        JOptionPane.showMessageDialog(null, "Vehicle is moving...");
+    }
+}

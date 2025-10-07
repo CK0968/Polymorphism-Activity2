@@ -1,0 +1,10 @@
+package polymorphism;
+
+import javax.swing.JOptionPane;
+
+public class Bicycle extends Vehicle {
+    @Override
+    public void move() {
+        JOptionPane.showMessageDialog(null, "Bicycle is pedaling on the path at 10 km/h", "Bicycle", JOptionPane.INFORMATION_MESSAGE);
+    }
+}

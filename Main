@@ -1,0 +1,42 @@
+package polymorphism;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        JOptionPane.showMessageDialog(null, "METHOD OVERLOADING ;)", "Method Overloading", JOptionPane.INFORMATION_MESSAGE);
+        
+        MathOperation math = new MathOperation();
+        
+        String input1 = JOptionPane.showInputDialog(null, "Enter first integer:", "5");
+        String input2 = JOptionPane.showInputDialog(null, "Enter second integer:", "10");
+        
+        int num1 = Integer.parseInt(input1);
+        int num2 = Integer.parseInt(input2);
+        int resultInt = math.multiply(num1, num2);
+        
+        JOptionPane.showMessageDialog(null, "Multiply integers:\n" + num1 + " * " + num2 + " = " + resultInt, "Integer Multiplication", JOptionPane.INFORMATION_MESSAGE);
+        
+        String input3 = JOptionPane.showInputDialog(null, "Enter first decimal number:", "3.5");
+        String input4 = JOptionPane.showInputDialog(null, "Enter second decimal number:", "2.5");
+        
+        double num3 = Double.parseDouble(input3);
+        double num4 = Double.parseDouble(input4);
+        double resultDouble = math.multiply(num3, num4);
+        
+        JOptionPane.showMessageDialog(null, "Multiply doubles:\n" + num3 + " * " + num4 + " = " + resultDouble, "Double Multiplication", JOptionPane.INFORMATION_MESSAGE);
+        
+        JOptionPane.showMessageDialog(null, "METHOD OVERRIDING ;)", "Method Overriding", JOptionPane.INFORMATION_MESSAGE);
+       
+        Vehicle vehicle1 = new Car();
+        Vehicle vehicle2 = new Bicycle();
+        
+        JOptionPane.showMessageDialog(null, "Car is moving vroom vroom:", "Car", JOptionPane.INFORMATION_MESSAGE);
+        vehicle1.move();
+        
+        JOptionPane.showMessageDialog(null, "Bicycle is moving pedaling pedaling:", "Bicycle", JOptionPane.INFORMATION_MESSAGE);
+        vehicle2.move();
+        
+    }
+}
